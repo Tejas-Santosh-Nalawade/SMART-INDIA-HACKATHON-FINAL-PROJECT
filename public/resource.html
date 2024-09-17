@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>Resorces</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        zhref="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Career Compass - School Career Guidance</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <link rel="stylesheet" href="./style.css">
+    
+    <style>
+        .animate-fadeIn {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .bg-gradient-blue {
+            background: linear-gradient(90deg, rgba(29,78,216,1) 0%, rgba(59,130,246,1) 100%);
+        }
+
+        .shadow-xl-custom {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .shadow-2xl-custom {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .transition-translate {
+            transition: transform 0.3s ease;
+        }
+
+        .transition-translate:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-blue-600 text-white p-4">
+
+<body class="bg-gray-100 font-poppins">
+    <header class="bg-gradient-blue text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl ">CareerCompass</h1>
+            <h1 class="text-3xl font-bold">Career Compass</h1>
             <nav class="relative">
-                <button id="menu-toggle" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                        </path>
+                <button id="menu-toggle" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
-                <ul id="menu"
-                    class="hidden md:flex md:space-x-4 absolute md:relative right-0 top-full md:top-auto bg-blue-600 md:bg-transparent p-4 md:p-0 rounded shadow md:shadow-none">
-                    <li><a href="./index.html" class="block py-2 md:py-0 hover:text-blue-200">Home</a></li>
-                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">About</a></li>
-                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Services</a></li>
-                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Resources</a></li>
-                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Contact</a></li>
+                <ul id="menu" class="hidden md:flex md:space-x-6 absolute md:relative right-0 top-full md:top-auto p-4 md:p-0 rounded shadow-lg md:shadow-none">
+                    <li><a href="./index.html" class="block py-2 md:py-0 hover:text-blue-200 transition-colors duration-300">Home</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200 transition-colors duration-300">About</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200 transition-colors duration-300">Services</a></li>
+                    <li><a href="/public/resource.html" class="block py-2 md:py-0 hover:text-blue-200 transition-colors duration-300">Resources</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200 transition-colors duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="container mx-auto mt-8 p-4">
             <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <a href="./commerce/commerce.html">
+                <a href="../commerce/commerce.html">
                     <div class="bg-white p-6 rounded shadow">
                         <h3 class="text-xl font-semibold mb-2">Commerce</h3>
                         <p>Explore path for pursing Commerce</p>
