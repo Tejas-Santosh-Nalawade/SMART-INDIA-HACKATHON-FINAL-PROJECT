@@ -1,0 +1,23 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+h1,h2{
+    font-family: "Poppins", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+h1,h2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+div.bg-white{
+    height: 13rem;
+    transition: transform 0.3s ease;
+}
+
+div.bg-white:hover {
+    transform: translateY(-10px);
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - School Career Guidance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        zhref="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl ">CareerCompass</h1>
+            <nav class="relative">
+                <button id="menu-toggle" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul id="menu"
+                    class="hidden md:flex md:space-x-4 absolute md:relative right-0 top-full md:top-auto bg-blue-600 md:bg-transparent p-4 md:p-0 rounded shadow md:shadow-none">
+                    <li><a href="../index.html" class="block py-2 md:py-0 hover:text-blue-200">Home</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">About</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Services</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Resources</a></li>
+                    <li><a href="#" class="block py-2 md:py-0 hover:text-blue-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section class="mb-12">
+            <h2 class="text-3xl mb-4">Paths from diploma in commerce</h2>
+            <p class="text-lg mb-4">Explore diverse career opportunities and make informed decisions about your future
+                with CareerCompass.</p>
+        </section>
+        
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <a href="./Financial_Accounting.html">
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-semibold mb-2">Financial Accounting</h3>
+                    <p>Provides foundational knowledge in financial accounting, covering
+                    double-entry bookkeeping, accounting software (like Tally), GST, and income tax.</p>
+                </div>
+            </a>
+            <a href="./banking.html">
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold mb-2">Banking</h3>
+                <p>Introduces students to the banking industry with basic principles of
+                banking, customer service, loan processing, and banking laws.</p>
+            </div>
+            </a>
+            <a href="./Business_adminstration.html">
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold mb-2">Business Administrationn</h3>
+                <p>Provides foundational knowledge in managing business operations,
+                including marketing, human resources, and basic management principles.</p>
+            </div>
+            </a>
+        </section>
+    </main>
+
+
+    <footer class="bg-gray-800 text-white p-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-2">CareerCompass</h3>
+                <p>Empowering students to make informed career choices.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-blue-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Services</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Resources</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Connect With Us</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-blue-300">Facebook</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Twitter</a></li>
+                    <li><a href="#" class="hover:text-blue-300">LinkedIn</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Ensure menu is visible on larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+    </body>
+    
+    
+    
+    </html>
